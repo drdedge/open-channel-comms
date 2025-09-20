@@ -11,10 +11,17 @@ interface DemoRequestDialogProps {
   children: React.ReactNode;
 }
 
+interface FormData {
+  name: string;
+  email: string;
+  organisation: string;
+  reason: string;
+}
+
 const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
   const [open, setOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     organisation: "",
@@ -27,18 +34,19 @@ const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // Direct insert with type casting to avoid TypeScript issues
+      const { error } = await (supabase as any)
         .from('signup_submissions')
         .insert([
           {
             name: formData.name,
             email: formData.email,
-            organisation: formData.organisation,
-            reason: formData.reason,
+            organisation: formData.organisation || null,
+            reason: formData.reason || null,
             metadata: { source: 'demo_request' }
           }
-        ] as any);
-
+        ]);
+      
       if (error) throw error;
 
       toast({
@@ -49,6 +57,7 @@ const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
       setFormData({ name: "", email: "", organisation: "", reason: "" });
       setOpen(false);
     } catch (error) {
+      console.error('Demo request error:', error);
       toast({
         title: "Error",
         description: "Failed to submit demo request. Please try again.",
@@ -59,7 +68,7 @@ const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
     }
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
