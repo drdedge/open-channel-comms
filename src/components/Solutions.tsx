@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import therapyImage from "@/assets/therapy-group.jpg";
 import surgeryImage from "@/assets/surgery-team.jpg";
+import DemoRequestDialog from "./DemoRequestDialog";
 
 const Solutions = () => {
   return (
@@ -57,17 +58,17 @@ const Solutions = () => {
               </div>
               
               <div className="bg-muted rounded-lg p-4">
-                <div className="text-lg font-semibold text-primary mb-2">Impact Results</div>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <div className="text-2xl font-bold text-secondary">85%</div>
-                    <div className="text-muted-foreground">Increased Participation</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-secondary">92%</div>
-                    <div className="text-muted-foreground">Patient Satisfaction</div>
-                  </div>
-                </div>
+                <div className="text-lg font-semibold text-primary mb-2">Key Benefits</div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start space-x-2">
+                    <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
+                    <span>Reduces social anxiety and communication barriers</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
+                    <span>Promotes equal participation in therapeutic settings</span>
+                  </li>
+                </ul>
               </div>
 
               <Button variant="outline" className="w-full">
@@ -115,17 +116,17 @@ const Solutions = () => {
               </div>
               
               <div className="bg-muted rounded-lg p-4">
-                <div className="text-lg font-semibold text-primary mb-2">Safety Improvements</div>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <div className="text-2xl font-bold text-accent">78%</div>
-                    <div className="text-muted-foreground">Fewer Complications</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-accent">95%</div>
-                    <div className="text-muted-foreground">Team Satisfaction</div>
-                  </div>
-                </div>
+                <div className="text-lg font-semibold text-primary mb-2">Expected Outcomes</div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start space-x-2">
+                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
+                    <span>Enhanced patient safety through improved communication</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
+                    <span>Better team collaboration and reduced hierarchy barriers</span>
+                  </li>
+                </ul>
               </div>
 
               <Button variant="outline" className="w-full">
@@ -136,9 +137,11 @@ const Solutions = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Button variant="cta" size="xl" className="text-lg">
-            Schedule Your Personalized Demo
-          </Button>
+          <DemoRequestDialog>
+            <Button variant="cta" size="xl" className="text-lg">
+              Schedule Your Personalized Demo
+            </Button>
+          </DemoRequestDialog>
         </div>
       </div>
     </section>
