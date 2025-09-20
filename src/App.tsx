@@ -12,7 +12,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <Toaster />
     <Sonner />
-    <BrowserRouter>
+    <BrowserRouter basename="/silentspeak-website">
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
