@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/open-channel-comms/",
+  base: "/silentspeak-website/",
   server: {
     host: "::",
     port: 8080,
