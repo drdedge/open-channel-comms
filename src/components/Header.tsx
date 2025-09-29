@@ -10,7 +10,8 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b shadow-soft">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container">
+        <div className="flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">🔉</span>
@@ -83,6 +84,16 @@ const Header = () => {
               </nav>
             </SheetContent>
           </Sheet>
+        </div>
+        </div>
+
+        {/* Tagline bar */}
+        <div className="border-t border-border bg-gradient-hero">
+          <div className="container py-2 text-center">
+            <p className="text-sm font-medium text-primary-foreground">
+              SilentSpeak™ gives every person a voice and a choice
+            </p>
+          </div>
         </div>
       </div>
     </header>

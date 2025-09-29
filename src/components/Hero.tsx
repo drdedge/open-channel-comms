@@ -5,7 +5,7 @@ import DemoRequestDialog from "./DemoRequestDialog";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-subtle overflow-hidden py-24 md:py-32">
+    <section className="relative bg-gradient-subtle overflow-hidden py-16 md:py-20">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
@@ -20,12 +20,11 @@ const Hero = () => {
 
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                A quiet bridge for anxious and neurodivergent teens in group therapy
+                Giving every person a voice and a choice
               </h1>
 
               <p className="text-xl text-muted-foreground leading-relaxed">
-                SilentSpeak is a patent-pending AI tool that lets young people type their thoughts during live group sessions.
-                Messages reach the facilitator privately, can be projected with consent, and help reduce the pressure to speak out loud.
+                SilentSpeak™ is a patent-pending AI tool that helps people express themselves when words are hard to find, creating safe and authentic communication across therapy, healthcare, neurodiversity support, and beyond.
               </p>
             </div>
 
