@@ -6,15 +6,15 @@ import DemoRequestDialog from "./DemoRequestDialog";
 
 const Solutions = () => {
   return (
-    <section id="solutions" className="py-20 bg-gradient-subtle">
+    <section id="critical-healthcare-challenges" className="py-20 bg-gradient-subtle">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-primary">Two Critical</span>{" "}
-            <span className="bg-gradient-hero bg-clip-text text-transparent">Healthcare Challenges</span>
+            <span className="text-primary">Critical Healthcare</span>{" "}
+            <span className="bg-gradient-hero bg-clip-text text-transparent">Challenges & Pathways</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            SilentSpeak addresses communication barriers in the most sensitive healthcare environments
+            SilentSpeak is being prepared for adolescent group therapy while mapping future uses in medical and therapeutic teams where silence hides vital information.
           </p>
         </div>
 
@@ -26,16 +26,19 @@ const Solutions = () => {
                 src={therapyImage}
                 alt="Inclusive therapy group session"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="450"%3E%3Crect width="800" height="450" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" fill="%23999"%3ETherapy Session%3C/text%3E%3C/svg%3E';
+                }}
               />
             </div>
             <CardHeader>
               <div className="flex items-center space-x-2 mb-2">
                 <span className="w-3 h-3 bg-secondary rounded-full"></span>
-                <span className="text-sm font-medium text-secondary">Therapeutic Care</span>
+                <span className="text-sm font-medium text-secondary">Prototype Focus</span>
               </div>
-              <CardTitle className="text-2xl">Empowering Neurodivergent Voices</CardTitle>
+              <CardTitle className="text-2xl">Adolescent Group Therapy</CardTitle>
               <CardDescription className="text-base">
-                Breaking down communication barriers for individuals with autism, ADHD, and other neurodivergent conditions
+                Designed for anxious, shy, or neurodivergent teens to participate silently while staying inside the circle of care.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -44,36 +47,32 @@ const Solutions = () => {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
-                    <span>Participants type thoughts anonymously during group sessions</span>
+                    <span>Participants type reflections anonymously on tablets, laptops, or phones.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
-                    <span>Moderator receives and can read messages aloud to the group</span>
+                    <span>Facilitators review messages privately and can read them aloud with consent.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
-                    <span>Creates safe space for participation without verbal pressure</span>
+                    <span>A shared screen or participant devices display messages so every voice is present without verbal pressure.</span>
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-muted rounded-lg p-4">
                 <div className="text-lg font-semibold text-primary mb-2">Key Benefits</div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
-                    <span>Reduces social anxiety and communication barriers</span>
+                    <span>Reduces communication anxiety and keeps teens engaged in therapy.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 shrink-0"></span>
-                    <span>Promotes equal participation in therapeutic settings</span>
+                    <span>81% of surveyed teens said SilentSpeak would make it easier to speak up.</span>
                   </li>
                 </ul>
               </div>
-
-              <Button variant="outline" className="w-full">
-                Learn More About Therapeutic Applications
-              </Button>
             </CardContent>
           </Card>
 
@@ -84,62 +83,61 @@ const Solutions = () => {
                 src={surgeryImage}
                 alt="Collaborative surgical team"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="450"%3E%3Crect width="800" height="450" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" fill="%23999"%3EHealthcare Team%3C/text%3E%3C/svg%3E';
+                }}
               />
             </div>
             <CardHeader>
               <div className="flex items-center space-x-2 mb-2">
                 <span className="w-3 h-3 bg-accent rounded-full"></span>
-                <span className="text-sm font-medium text-accent">Critical Care</span>
+                <span className="text-sm font-medium text-accent">Future Exploration</span>
               </div>
-              <CardTitle className="text-2xl">Breaking Down Medical Hierarchies</CardTitle>
+              <CardTitle className="text-2xl">Healthcare Teams & Hierarchies</CardTitle>
               <CardDescription className="text-base">
-                Enabling all team members to share critical observations and suggestions in high-stakes environments
+                Communication breakdowns contribute to over 70% of sentinel events; SilentSpeak's anonymous channel could help critical insights surface in time.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-3">
-                <h4 className="font-semibold text-primary">How It Works:</h4>
+                <h4 className="font-semibold text-primary">Where It Could Help:</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
-                    <span>Any team member can submit anonymous observations or concerns</span>
+                    <span>Operating theatres where around 30% of exchanges fail and 72% of malpractice claims involve communication gaps.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
-                    <span>Real-time alerts appear on team displays for immediate review</span>
+                    <span>Ward rounds and multidisciplinary meetings where junior staff may hold back concerns.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
-                    <span>Promotes open dialogue and prevents hierarchy-based oversights</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-muted rounded-lg p-4">
-                <div className="text-lg font-semibold text-primary mb-2">Expected Outcomes</div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start space-x-2">
-                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
-                    <span>Enhanced patient safety through improved communication</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
-                    <span>Better team collaboration and reduced hierarchy barriers</span>
+                    <span>Clinical supervision, training, and governance conversations that need candid insights.</span>
                   </li>
                 </ul>
               </div>
 
-              <Button variant="outline" className="w-full">
-                Explore Surgical Team Solutions
-              </Button>
+              <div className="bg-muted rounded-lg p-4">
+                <div className="text-lg font-semibold text-primary mb-2">What We Aim to Explore</div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start space-x-2">
+                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
+                    <span>Anonymous alerts that prevent missed counts, dosage errors, or overlooked deterioration.</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
+                    <span>Psychological safety for staff who feel silenced by hierarchy, shyness, or neurodivergence.</span>
+                  </li>
+                </ul>
+              </div>
             </CardContent>
           </Card>
         </div>
 
         <div className="text-center mt-16">
           <DemoRequestDialog>
-            <Button variant="cta" size="xl" className="text-lg">
-              Schedule Your Personalized Demo
+            <Button variant="hero" size="xl" className="text-lg">
+              Request Demo
             </Button>
           </DemoRequestDialog>
         </div>

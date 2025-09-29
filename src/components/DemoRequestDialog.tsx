@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import type { TablesInsert } from "@/integrations/supabase/types";
 
 interface DemoRequestDialogProps {
   children: React.ReactNode;
@@ -34,24 +35,23 @@ const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
     setIsSubmitting(true);
 
     try {
-      // Direct insert with type casting to avoid TypeScript issues
-      const { error } = await (supabase as any)
-        .from('signup_submissions')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            organisation: formData.organisation || null,
-            reason: formData.reason || null,
-            metadata: { source: 'demo_request' }
-          }
-        ]);
+      const payload: TablesInsert<"signup_submissions"> = {
+        name: formData.name,
+        email: formData.email,
+        organisation: formData.organisation || null,
+        reason: formData.reason || null,
+        metadata: { source: "demo_request" }
+      };
+
+      const { error } = await supabase
+        .from("signup_submissions")
+        .insert([payload]);
       
       if (error) throw error;
 
       toast({
-        title: "Demo Request Submitted",
-        description: "We'll be in touch within 24 hours to schedule your personalized demo.",
+        title: "Demo Request Received",
+        description: "We'll follow up within 24 hours to coordinate the SilentSpeak walkthrough.",
       });
 
       setFormData({ name: "", email: "", organisation: "", reason: "" });
@@ -81,7 +81,7 @@ const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
         <DialogHeader>
           <DialogTitle>Request a Demo</DialogTitle>
           <DialogDescription>
-            Tell us about your organization and we'll schedule a personalized demonstration of SilentSpeak.
+            Share a few details about your organisation and we will arrange a SilentSpeak session when you're ready.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -122,7 +122,7 @@ const DemoRequestDialog = ({ children }: DemoRequestDialogProps) => {
             />
           </div>
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Request Demo"}
+            {isSubmitting ? "Submitting..." : "Submit Request"}
           </Button>
         </form>
       </DialogContent>

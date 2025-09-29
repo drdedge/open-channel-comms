@@ -1,38 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import DemoRequestDialog from "./DemoRequestDialog";
+import { features } from "@/data/features";
 
 const Features = () => {
-  const features = [
-    {
-      icon: "🔒",
-      title: "Anonymous & Secure",
-      description: "Complete anonymity with end-to-end encryption and HIPAA compliance for sensitive healthcare communications."
-    },
-    {
-      icon: "⚡",
-      title: "Real-Time Communication",
-      description: "Instant message delivery and moderation tools that work seamlessly in fast-paced medical environments."
-    },
-    {
-      icon: "🎯",
-      title: "Smart Moderation",
-      description: "AI-powered content filtering and human moderator tools to ensure appropriate and helpful communication."
-    },
-    {
-      icon: "📊",
-      title: "Analytics & Insights",
-      description: "Track participation rates, communication patterns, and patient outcomes to measure program effectiveness."
-    },
-    {
-      icon: "🌐",
-      title: "Multi-Platform Access",
-      description: "Works across tablets, smartphones, and desktop computers with intuitive interfaces for all users."
-    },
-    {
-      icon: "⚙️",
-      title: "Customizable Settings",
-      description: "Flexible configuration options to match your facility's specific protocols and communication needs."
-    }
-  ];
 
   return (
     <section id="features" className="py-20">
@@ -40,10 +11,10 @@ const Features = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             <span className="text-primary">Built for</span>{" "}
-            <span className="bg-gradient-hero bg-clip-text text-transparent">Healthcare Excellence</span>
+            <span className="bg-gradient-hero bg-clip-text text-transparent">Silent Participation</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Every feature designed with patient safety, privacy, and effective communication at its core
+            Each element of SilentSpeak mirrors real therapy-room needs so anxious and neurodivergent voices can join safely and on their own terms.
           </p>
         </div>
 
@@ -69,18 +40,15 @@ const Features = () => {
         </div>
 
         <div className="mt-16 bg-gradient-hero rounded-2xl p-8 text-center text-primary-foreground">
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Healthcare Communication?</h3>
+          <h3 className="text-2xl font-bold mb-4">We are gathering partners and feedback.</h3>
           <p className="text-lg opacity-90 mb-6">
-            Join leading healthcare facilities already using SilentSpeak to improve patient outcomes and team collaboration.
+            SilentSpeak is in its proposal stage, seeking collaborations, funding, and lived-experience insight to bring the platform to life.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+          <DemoRequestDialog>
+            <Button variant="hero" size="lg" className="text-base">
               Request Demo
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
+            </Button>
+          </DemoRequestDialog>
         </div>
       </div>
     </section>
