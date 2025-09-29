@@ -18,29 +18,6 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <Card className="shadow-card">
-              <CardHeader>
-                <CardTitle className="text-2xl">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  SilentSpeak was created to help anxious, shy, and neurodivergent teens stay engaged in therapy. By letting participants type during live sessions, facilitators can read reflections aloud with consent, keeping every young person included without forcing them to speak before they are ready.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-card">
-              <CardHeader>
-                <CardTitle className="text-2xl">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  We imagine therapy rooms, schools, clinics, and workplaces where silence is invited, not questioned. SilentSpeak nurtures environments that honour sensitivity, make room for gradual beginnings, and turn quiet observations into contributions that strengthen community feeling.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
@@ -88,11 +65,37 @@ const About = () => {
           </div>
 
           <Card className="shadow-glow border-0 bg-gradient-hero text-primary-foreground">
-            <CardContent className="p-12 text-center">
-              <CardTitle className="text-3xl mb-4">Our Story</CardTitle>
-              <CardDescription className="text-lg text-primary-foreground/90 max-w-3xl mx-auto">
-                SilentSpeak began with a simple observation: many young people leave therapy or stay silent because speaking out loud feels impossible. The project asks what would happen if technology offered a quieter path. Messages are typed, privacy panels protect participation, and safeguarding features alert facilitators when a teen may be at risk. Inspired by the compassion of Florence Nightingale and the transformative intent of Alfred Nobel, SilentSpeak uses AI to nurture inclusion rather than fear. We are gathering surveys, funding, and partnerships so that silence can become another way to be heard.
-              </CardDescription>
+            <CardContent className="p-12">
+              <CardTitle className="text-3xl mb-6 text-center">Why SilentSpeak Exists</CardTitle>
+              <div className="space-y-4 text-base text-primary-foreground/95 max-w-4xl mx-auto leading-relaxed">
+                <p>
+                  <strong>The Crisis:</strong> Suicide was the leading cause of death for people aged 5-35 in England in 2022, with three-quarters being boys or young men. Suicide rates among 15-19 year olds rose by 35% from 2020 to 2021—the highest in over 30 years. In 2023/24, 78,577 young people waited over a year for NHS mental health treatment, with 59% reporting their mental health worsened while waiting.
+                </p>
+
+                <p>
+                  <strong>The Problem:</strong> Many teenagers—especially those with anxiety, shyness, or neurodivergence (autism, ADHD, dyslexia)—struggle to speak during group therapy. Research shows communication failures contribute to over 70% of adverse events in healthcare settings. Yet most digital mental health tools focus on individual therapy or crisis support. Very few enable silent, secure participation within live group settings where connection and community feeling are vital.
+                </p>
+
+                <p>
+                  <strong>The Evidence:</strong> Early surveys with 62 respondents (teens, parents, clinicians, and adults) showed remarkable support. Among teens, 81% said SilentSpeak would make speaking up easier, 76% preferred typing over talking, and 71% felt it would help them be heard. Every teacher and clinician surveyed agreed it could improve inclusion and focus. Among parents, 93% would support their child using it, and 86% believed it could ease communication anxiety. More than half of adults said they would consider using it themselves.
+                </p>
+
+                <p>
+                  <strong>Our Solution:</strong> SilentSpeak is a patent-pending AI tool that allows teens to type their thoughts during group therapy sessions. Messages appear on the facilitator's device and can be read aloud with consent, displayed on a screen, or followed on participants' devices. Privacy panels shield contributors. AI gently rephrases content, offers prompts, and draws on stoicism, radical acceptance, and Adlerian therapy principles—emphasizing social connection, encouragement, and community feeling. A safeguarding feature under development will quietly alert facilitators to high-risk language, enabling earlier interventions when someone feels unsafe.
+                </p>
+
+                <p>
+                  <strong>Our Inspiration:</strong> SilentSpeak draws from leaders like Florence Nightingale, who used data and empathy to transform hospital care, and Alfred Nobel, who turned something once feared into a force for human progress. Similarly, SilentSpeak uses AI—a technology some fear—to offer connection, healing, and inclusion. It shows that technology can support, protect, and mend rather than divide.
+                </p>
+
+                <p>
+                  <strong>Beyond Group Therapy:</strong> While designed for anxious and neurodivergent teens, SilentSpeak has potential to reshape communication across settings—adult therapy groups, medical teams (reducing surgical errors and hierarchical silence), workplaces, schools, refugee support, palliative care, and legal testimony for trauma survivors. We imagine therapy rooms, classrooms, clinics, and workplaces where silence is invited, not questioned—where every voice can be heard, even when speaking feels impossible.
+                </p>
+
+                <p className="font-semibold pt-2">
+                  SilentSpeak is more than a tool. It is a step toward changing how we listen to those who cannot speak out loud. We are gathering funding, partnerships, and support to bring SilentSpeak to life—so that silence can become another way to be heard, and no young person feels invisible.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
