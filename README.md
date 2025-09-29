@@ -119,6 +119,41 @@ To update content:
 - **Applications**: Edit `src/components/Solutions.tsx`
 - **About Page**: Edit `src/pages/About.tsx`
 
+## Environment Variables
+
+This project uses Supabase for backend functionality. For security:
+
+1. **Copy `.env.example` to `.env.local`**
+   ```bash
+   cp .env.example .env.local
+   ```
+
+2. **Add your Supabase credentials** to `.env.local`:
+   ```bash
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_PUBLISHABLE_KEY=your_anon_key
+   ```
+
+3. **Configure GitHub Secrets** for deployment:
+   - Go to Repository Settings > Secrets and variables > Actions
+   - Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`
+
+See [ENVIRONMENT.md](./ENVIRONMENT.md) for detailed security configuration and best practices.
+
+## SEO & PWA
+
+The site includes:
+- **sitemap.xml**: Update URLs when deploying to your domain
+- **robots.txt**: Configured to allow all search engines
+- **manifest.json**: PWA support with proper icons
+- **Meta tags**: Optimized for search engines and social sharing
+
+**Important**: Update the following files with your actual GitHub Pages URL:
+- `index.html` - Open Graph URLs
+- `public/sitemap.xml` - All page URLs
+- `public/robots.txt` - Sitemap location
+- `public/manifest.json` - start_url and scope
+
 ## Contributing
 
 When making changes:
@@ -126,6 +161,7 @@ When making changes:
 2. Test build locally before pushing: `npm run build`
 3. Verify routes work correctly with GitHub Pages base path
 4. Keep design system colors consistent across components
+5. Never commit `.env.local` or real API keys to git
 
 ## License
 

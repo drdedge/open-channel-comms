@@ -9,15 +9,12 @@ const {
   REACT_APP_SUPABASE_PUBLISHABLE_DEFAULT_KEY,
 } = import.meta.env;
 
-const SUPABASE_URL =
-  VITE_SUPABASE_URL ||
-  REACT_APP_SUPABASE_URL ||
-  "https://rsmmmlmdwmvhuxipiwvz.supabase.co";
+const SUPABASE_URL = VITE_SUPABASE_URL || REACT_APP_SUPABASE_URL;
+const SUPABASE_PUBLISHABLE_KEY = VITE_SUPABASE_PUBLISHABLE_KEY || REACT_APP_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
-const SUPABASE_PUBLISHABLE_KEY =
-  VITE_SUPABASE_PUBLISHABLE_KEY ||
-  REACT_APP_SUPABASE_PUBLISHABLE_DEFAULT_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJzbW1tbG1kd212aHV4aXBpd3Z6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzNDMyNzMsImV4cCI6MjA3MzkxOTI3M30.f4z5Z4wpfoGlfQsiBUx_EvtWnSb4j-38WhQ_5xUiq1A";
+if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+  throw new Error('Missing Supabase environment variables. Please check your .env file or GitHub Secrets.');
+}
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
