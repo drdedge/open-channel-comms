@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    /* Core SilentSpeak palette - trust, safety, and empowerment */
-    --background: 280 100% 99%;
-    --foreground: 215 25% 17%;
+    /* Core SilentSpeak palette - Warm Trust theme for professional fundraising */
+    --background: 210 20% 98%;
+    --foreground: 221 39% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 17%;
+    --card-foreground: 221 39% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 17%;
+    --popover-foreground: 221 39% 20%;
 
-    /* Purple - trust, calm, professionalism */
-    --primary: 263 69% 42%;
-    --primary-light: 263 59% 62%;
+    /* Navy/Indigo - professional, trustworthy */
+    --primary: 221 39% 36%;
+    --primary-light: 221 39% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Green - growth, safety, healing */
-    --secondary: 142 52% 51%;
+    /* Sage Green - calm, growth, healing */
+    --secondary: 140 27% 59%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Orange - warmth, hope, energy */
-    --accent: 25 95% 53%;
+    /* Warm Gold - hope, optimism, energy */
+    --accent: 38 92% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 221 20% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 263 69% 42%;
+    --border: 221 15% 88%;
+    --input: 221 15% 88%;
+    --ring: 221 39% 36%;
 
     --radius: 1rem;
 
     /* Gradients for visual impact */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(280 100% 97%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(25 95% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(221 39% 36%) 0%, hsl(221 39% 50%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(221 25% 96%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(38 85% 60%) 100%);
 
     /* Shadows for depth */
-    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
-    --shadow-glow: 0 0 40px hsl(var(--primary-light) / 0.3);
-    --shadow-card: 0 8px 32px -8px hsl(220 13% 40% / 0.12);
+    --shadow-soft: 0 4px 20px -4px hsl(221 39% 36% / 0.15);
+    --shadow-glow: 0 0 40px hsl(221 39% 50% / 0.25);
+    --shadow-card: 0 8px 32px -8px hsl(221 20% 40% / 0.12);
 
     /* Animation timing */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
