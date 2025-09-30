@@ -4,7 +4,8 @@
       "Bash(cat:*)",
       "Bash(dir /b srcassets)",
       "Bash(npm run build:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
