@@ -1,7 +1,8 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ericaImage from "@/assets/erica_picture_cartoon.png";
-import davidImage from "@/assets/david_fw_profile.jpg";
+import mayaImage from "@/assets/maya_profile.jpg";
+import davidImage from "@/assets/DaveProfessional.jpeg";
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
-            <div className="flex flex-col md:flex-row gap-8 justify-center items-start max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-start max-w-6xl mx-auto">
               <Card className="shadow-card text-center">
                 <CardContent className="pt-8 space-y-4">
                   <img
@@ -45,6 +46,26 @@ const About = () => {
               <Card className="shadow-card text-center">
                 <CardContent className="pt-8 space-y-4">
                   <img
+                    src={mayaImage}
+                    alt="Professional profile photograph of Maya Rehill"
+                    className="w-24 h-24 rounded-full mx-auto object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="96" height="96"%3E%3Ccircle cx="48" cy="48" r="48" fill="%23e0e0e0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="32" fill="%23999"%3EMR%3C/text%3E%3C/svg%3E';
+                    }}
+                  />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">Maya Rehill</h3>
+                    <p className="text-muted-foreground mb-2">Director of Operations & Governance</p>
+                    <p className="text-sm text-muted-foreground">
+                      Maya brings 17+ years of programme and project management across Technology, Financial Services, and Government sectors. As founder of Riari J'Dorn, she uses diamond jewellery sales to fund ADHD/ASD assessments for children, turning each purchase into two assessments—one for the buyer's family and one for a child in need.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card text-center">
+                <CardContent className="pt-8 space-y-4">
+                  <img
                     src={davidImage}
                     alt="Professional profile photograph of David Edgeley"
                     className="w-24 h-24 rounded-full mx-auto object-cover"
@@ -56,7 +77,7 @@ const About = () => {
                     <h3 className="text-xl font-semibold mb-1">David Edgeley</h3>
                     <p className="text-muted-foreground mb-2">Technical Lead</p>
                     <p className="text-sm text-muted-foreground">
-                      David applies a decade of machine learning leadership across finance and AI product delivery. With a PhD in computational pharmacy modelling drug compounds, he now guides SilentSpeak’s data architecture, safeguarding intelligence, and responsible AI roadmap.
+                      David applies a decade of machine learning leadership across finance and AI product delivery. With a PhD in computational pharmacy modelling drug compounds, he now guides SilentSpeak's data architecture, safeguarding intelligence, and responsible AI roadmap.
                     </p>
                   </div>
                 </CardContent>
