@@ -27,14 +27,14 @@ const About = () => {
                 <CardContent className="pt-8 space-y-4">
                   <img
                     src={ericaImage}
-                    alt="Portrait illustration of Erica Lyons"
+                    alt="Portrait illustration of Erica Lyon"
                     className="w-24 h-24 rounded-full mx-auto object-cover"
                     onError={(e) => {
                       e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="96" height="96"%3E%3Ccircle cx="48" cy="48" r="48" fill="%23e0e0e0"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="32" fill="%23999"%3EEL%3C/text%3E%3C/svg%3E';
                     }}
                   />
                   <div>
-                    <h3 className="text-xl font-semibold mb-1">Erica Lyons</h3>
+                    <h3 className="text-xl font-semibold mb-1">Erica Lyon</h3>
                     <p className="text-muted-foreground mb-2">Founder & Trainee Doctor</p>
                     <p className="text-sm text-muted-foreground">
                       Erica brings over 15 years of nursing experience in the United States, is neurodivergent, and is raising two neurodivergent children—fueling her commitment to more compassionate, accessible mental health care.
