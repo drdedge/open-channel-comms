@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ericaImage from "@/assets/erica_profile.jpg";
-import mayaImage from "@/assets/maya_profile.jpg";
+import mayaImage from "@/assets/maya_profile.jpeg";
 import davidImage from "@/assets/DaveProfessional.jpeg";
 
 const About = () => {
