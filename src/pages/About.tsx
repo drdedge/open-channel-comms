@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import ericaImage from "@/assets/erica_picture_cartoon.png";
+import ericaImage from "@/assets/erica_profile.jpg";
 import mayaImage from "@/assets/maya_profile.jpg";
 import davidImage from "@/assets/DaveProfessional.jpeg";
 
@@ -22,8 +22,8 @@ const About = () => {
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
-            <div className="flex flex-col md:flex-row gap-8 justify-center items-start max-w-6xl mx-auto">
-              <Card className="shadow-card text-center">
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-6xl mx-auto">
+              <Card className="shadow-card text-center flex-1 md:max-w-[33%]">
                 <CardContent className="pt-8 space-y-4">
                   <img
                     src={ericaImage}
@@ -34,16 +34,16 @@ const About = () => {
                     }}
                   />
                   <div>
-                    <h3 className="text-xl font-semibold mb-1">Erica Lyon</h3>
-                    <p className="text-muted-foreground mb-2">Founder & Trainee Doctor</p>
+                    <h3 className="text-xl font-semibold mb-1">Erica Lyon – The Heart</h3>
+                    <p className="text-muted-foreground mb-2">Founder, Trainee Doctor, & PhD student in Clinical Psychology</p>
                     <p className="text-sm text-muted-foreground">
-                      Erica brings over 15 years of nursing experience in the United States, is neurodivergent, and is raising two neurodivergent children—fueling her commitment to more compassionate, accessible mental health care.
+                      With over 15 years of paediatric nursing experience in the United States, Erica brings lived expertise as a neurodivergent parent raising two neurodivergent children. She leads SilentSpeak with empathy, therapeutic vision, and a commitment to making mental health care more compassionate and accessible for everyone.
                     </p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card text-center">
+              <Card className="shadow-card text-center flex-1 md:max-w-[33%]">
                 <CardContent className="pt-8 space-y-4">
                   <img
                     src={mayaImage}
@@ -63,7 +63,7 @@ const About = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card text-center">
+              <Card className="shadow-card text-center flex-1 md:max-w-[33%]">
                 <CardContent className="pt-8 space-y-4">
                   <img
                     src={davidImage}
@@ -77,7 +77,7 @@ const About = () => {
                     <h3 className="text-xl font-semibold mb-1">David Edgeley</h3>
                     <p className="text-muted-foreground mb-2">Technical Lead</p>
                     <p className="text-sm text-muted-foreground">
-                      David applies a decade of machine learning leadership across finance and AI product delivery. With a PhD in computational pharmacy modelling drug compounds, he now guides SilentSpeak's data architecture, safeguarding intelligence, and responsible AI roadmap.
+                      With over 10 years of experience in AI and Machine Learning and 8 years of consulting experience including early years providers and healthcare, David currently works for a large Private Credit fund in London leading their technical development of AI capability. With a PhD in computational pharmacy, he guides SilentSpeak's data architecture, safeguarding intelligence, and responsible AI roadmap.
                     </p>
                   </div>
                 </CardContent>
