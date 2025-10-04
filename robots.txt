@@ -1,0 +1,9 @@
+# SilentSpeak - Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual GitHub Pages URL)
+Sitemap: https://drdedge.github.io/silentspeak-website/sitemap.xml
+
+# Crawl delay (optional - be respectful to search engines)
+Crawl-delay: 1

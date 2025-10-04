@@ -1,0 +1,20 @@
+{
+  "name": "SilentSpeak - Giving Every Person a Voice and a Choice",
+  "short_name": "SilentSpeak",
+  "description": "Patent-pending AI tool helping anxious and neurodivergent individuals participate silently in group therapy and healthcare settings.",
+  "start_url": "/silentspeak-website/",
+  "scope": "/silentspeak-website/",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#495f7f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/silentspeak-website/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["healthcare", "education", "productivity", "lifestyle"],
+  "lang": "en-US"
+}
